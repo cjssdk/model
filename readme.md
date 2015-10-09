@@ -1,5 +1,5 @@
-Model component
-===============
+STB SDK base model implementation
+=================================
 
 [![NPM version](https://img.shields.io/npm/v/stb-model.svg?style=flat-square)](https://www.npmjs.com/package/stb-model)
 [![Dependencies Status](https://img.shields.io/david/stbsdk/model.svg?style=flat-square)](https://david-dm.org/stbsdk/model)
