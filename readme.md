@@ -26,11 +26,70 @@ Add the constructor to the scope:
 var Model = require('stb-model');
 ```
 
-Create an instance:
+Create an empty instance:
 
 ```js
 var model = new Model();
 ```
+
+Create an instance with some data:
+
+```js
+var model = new Model({
+	attr1: value1,
+	attr2: value2,
+});
+```
+
+Clear all data:
+
+```js
+model.clear();
+```
+
+> emits `clear` event in case some data is present
+
+Clear and set new model data:
+
+```js
+model.init({
+	attr3: value3,
+	attr4: value4,
+});
+```
+
+> can emit `clear` and `init` events
+
+Check an attribute existence:
+
+```js
+if ( model.has('attr3') ) {
+    ...
+}
+```
+
+Get a model attribute value by name:
+
+```js
+var value = model.get('attr1');
+```
+
+Update or create a model attribute:
+
+```js
+var operationStatus = model.set('attr5', 'value5');
+```
+
+> emits `change` event with `prev` field in data in case of update operation
+
+Delete the given attribute by name:
+
+```js
+var operationStatus = model.unset('attr5');
+```
+
+> emits `change` event
+
 
 
 ## Debug mode
