@@ -91,6 +91,25 @@ var operationStatus = model.unset('attr5');
 > emits `change` event
 
 
+## Performance notes
+
+It is highly advisable to access a model data directly in case **no events are required**.
+
+So instead of
+
+```js
+var value = model.get('attr1');
+model.set('attr5', 'value5');
+```
+
+to avoid performance penalty it's better to use
+
+```js
+var value = model.data.attr1;
+model.data.attr5 = 'value5';
+```
+
+
 
 ## Debug mode
 
