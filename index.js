@@ -45,14 +45,10 @@ Model.prototype = Object.create(Emitter.prototype);
 Model.prototype.constructor = Model;
 
 
-// which of data fields is primary
-//Model.prototype.idName = 'id';
-
-
 /**
  * Remove all attributes from the model event.
  *
- * @event module:stb/model~Model#clear
+ * @event Model#clear
  *
  * @type {Object}
  * @property {Object} data old model attributes
@@ -64,7 +60,7 @@ Model.prototype.constructor = Model;
  *
  * @return {boolean} operation status
  *
- * @fires module:stb/model~Model#clear
+ * @fires Model#clear
  */
 Model.prototype.clear = function () {
 	var data = this.data;
@@ -95,7 +91,7 @@ Model.prototype.clear = function () {
 /**
  * Set model data event.
  *
- * @event module:stb/model~Model#init
+ * @event Model#init
  *
  * @type {Object}
  * @property {Object} data new model attributes
@@ -108,8 +104,8 @@ Model.prototype.clear = function () {
  * @param {Object} data attributes
  * @return {boolean} operation status
  *
- * @fires module:stb/model~Model#clear
- * @fires module:stb/model~Model#init
+ * @fires Model#clear
+ * @fires Model#init
  */
 Model.prototype.init = function ( data ) {
 	if ( DEBUG ) {
@@ -156,7 +152,7 @@ Model.prototype.has = function ( name ) {
 };
 
 /**
- * Get the model attribute by name.
+ * Get a model attribute value by name.
  *
  * @param {string} name attribute
  *
@@ -174,7 +170,7 @@ Model.prototype.get = function ( name ) {
 /**
  * Update or create a model attribute event.
  *
- * @event module:stb/model~Model#change
+ * @event Model#change
  *
  * @type {Object}
  * @property {string} name attribute name
@@ -190,7 +186,7 @@ Model.prototype.get = function ( name ) {
  * @param {*} value associated value
  * @return {boolean} operation status (true - attribute value was changed/created)
  *
- * @fires module:stb/model~Model#change
+ * @fires Model#change
  */
 Model.prototype.set = function ( name, value ) {
 	var isAttrSet = name in this.data,
@@ -239,7 +235,7 @@ Model.prototype.set = function ( name, value ) {
  * @param {string} name attribute
  * @return {boolean} operation status (true - attribute was deleted)
  *
- * @fires module:stb/model~Model#change
+ * @fires Model#change
  */
 Model.prototype.unset = function ( name ) {
 	var isAttrSet = name in this.data,
@@ -265,85 +261,6 @@ Model.prototype.unset = function ( name ) {
 	// nothing was done
 	return false;
 };
-
-
-///**
-// * Extends the model with the given attribute list
-// * @param {Object} data
-// */
-//Model.prototype.attributes = function ( data ) {
-//	var index   = 0,
-//		keyList = data && typeof data === 'object' ? Object.keys(data) : [];
-//	for ( ; index < keyList.length; index++ ) {
-//		this.set(keyList[index], data[keyList[index]]);
-//	}
-//};
-
-
-///**
-// * Prepare all data for sending to a server
-// * @return {Object}
-// */
-//Model.prototype.pack = function () {
-//	return this._data;
-//};
-
-
-///**
-// * Restores the received data from a server to a model data
-// * @param {Object} data
-// * @return {Object}
-// */
-//Model.prototype.unpack = function ( data ) {
-//	return data;
-//};
-
-
-///**
-// * Sync model to a server
-// */
-//Model.prototype.save = function () {
-//	var self = this;
-//	if ( this.url ) {
-//		// collect data
-//		io.ajax(this.url, {
-//			// request params
-//			method: self._data[self.idName] ? 'put' : 'post',
-//			data  : self.pack(),
-//			onload: function ( data ) {
-//				data = self.unpack(self.parse(data));
-//				self.attributes(data);
-//				console.log(data);
-//				self.emit('save', true);
-//			},
-//			// error handlers
-//			onerror:   this.saveFailure,
-//			ontimeout: this.saveFailure
-//		});
-//	}
-//};
-
-
-///**
-// * Error handler while model data fetch
-// */
-//Model.prototype.saveFailure = function () {
-//	this.emit('save', false);
-//};
-
-
-///**
-// * Converts received data from a server to a model attributes
-// * @param {string} response
-// * @return {Object}
-// */
-//Model.prototype.parse = function ( response ) {
-//	var data = {};
-//	try {
-//		data = JSON.parse(response).data;
-//	} catch(e){ console.log(e); }
-//	return data;
-//};
 
 
 if ( DEBUG ) {
