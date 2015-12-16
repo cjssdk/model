@@ -1,25 +1,12 @@
 {
 	"env": {
 		"browser": true,
-		"node": true
+		"node": true,
+		"commonjs": true
 	},
 
 	"globals": {
-		"DEBUG": false,
-		"debug": false,
-		"gettext": false,
-		"ngettext": false,
-		"pgettext": false,
-		"dvbManager": false,
-		"gSTB": false,
-		"pvrManager": false,
-		"stbDownloadManager": false,
-		"stbStorage": false,
-		"stbUpdate": false,
-		"stbWebWindow": false,
-		"stbWildWebWindow": false,
-		"stbWindowMgr": false,
-		"timeShift": false
+		"DEBUG": false
 	},
 
 	"rules": {
@@ -57,6 +44,7 @@
 		"eqeqeq": 1,
 		"no-alert": 1,
 		"no-caller": 1,
+		"no-case-declarations": 2,
 		"no-else-return": 1,
 		"no-eval": 1,
 		"no-extend-native": [2, {"exceptions": []}],
