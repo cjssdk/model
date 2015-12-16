@@ -1,13 +1,12 @@
 /**
- * @module stb-model
- *
- * @author Stanislav Kalashnik <sk@infomir.eu>
+ * @author Stanislav Kalashnik <darkpark.main@gmail.com>
  * @license GNU GENERAL PUBLIC LICENSE Version 3
  */
 
 'use strict';
 
-var Emitter = require('stb-emitter');
+/** @private */
+var Emitter = require('cjs-emitter');
 
 
 /**
@@ -261,12 +260,6 @@ Model.prototype.unset = function ( name ) {
 	// nothing was done
 	return false;
 };
-
-
-if ( DEBUG ) {
-	// expose to the global scope
-	window.Model = Model;
-}
 
 
 // public
