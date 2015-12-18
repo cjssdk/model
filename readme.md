@@ -38,8 +38,8 @@ Create an instance with some data:
 
 ```js
 var model = new Model({
-	attr1: value1,
-	attr2: value2,
+    attr1: value1,
+    attr2: value2,
 });
 ```
 
@@ -55,8 +55,8 @@ Clear and set new model data:
 
 ```js
 model.init({
-	attr3: value3,
-	attr4: value4,
+    attr3: value3,
+    attr4: value4,
 });
 ```
 
