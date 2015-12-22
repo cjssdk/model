@@ -1,24 +1,24 @@
 {
-	"name": "cjs-model",
-	"version": "1.5.0",
-	"description": "Basic model implementation.",
-	"author": {
-		"name": "Stanislav Kalashnik",
-		"email": "darkpark.main@gmail.com"
-	},
-	"repository": "cjssdk/model",
-	"scripts": {
-		"lint": "eslint ./*.js"
-	},
-	"dependencies": {
-		"cjs-emitter": "1.*.*"
-	},
-	"devDependencies": {},
-	"keywords": [
-		"commonjs",
-		"sdk",
-		"framework",
-		"model"
-	],
-	"license": "GPL-3.0"
+    "name": "cjs-model",
+    "version": "1.5.0",
+    "description": "Basic model implementation.",
+    "author": {
+        "name": "Stanislav Kalashnik",
+        "email": "darkpark.main@gmail.com"
+    },
+    "repository": "cjssdk/model",
+    "scripts": {
+        "lint": "eslint ./*.js"
+    },
+    "dependencies": {
+        "cjs-emitter": "1.*.*"
+    },
+    "devDependencies": {},
+    "keywords": [
+        "commonjs",
+        "sdk",
+        "framework",
+        "model"
+    ],
+    "license": "GPL-3.0"
 }
