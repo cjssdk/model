@@ -13,14 +13,14 @@ Holds information, but don’t handle behaviour and don’t format information o
 `cjs-model` extends [Emitter](https://github.com/cjssdk/emitter) interface.
 
 
-## Installation
+## Installation ##
 
 ```bash
 npm install cjs-model
 ```
 
 
-## Usage
+## Usage ##
 
 Add the constructor to the scope:
 
@@ -93,7 +93,7 @@ var operationStatus = model.unset('attr5');
 > emits `change` event
 
 
-## Performance notes
+## Performance notes ##
 
 It is highly advisable to access a model data directly in case **no events are required**.
 
@@ -113,17 +113,17 @@ model.data.attr5 = 'value5';
 
 
 
-## Debug mode
+## Debug mode ##
 
 > There is a global var `DEBUG` which activates additional consistency checks and protection logic not available in release mode.
 
 
-## Contribution
+## Contribution ##
 
 If you have any problem or suggestion please open an issue [here](https://github.com/cjssdk/model/issues).
 Pull requests are welcomed with respect to the [JavaScript Code Style](https://github.com/DarkPark/jscs).
 
 
-## License
+## License ##
 
 `cjs-model` is released under the [GPL-3.0 License](http://opensource.org/licenses/GPL-3.0).
