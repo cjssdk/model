@@ -9,7 +9,8 @@
     "repository": "cjssdk/model",
     "scripts": {
         "lint": "eslint ./*.js",
-        "test": "node ./tests/main.js"
+        "test": "node ./tests/main.js",
+        "jsdoc": "jsdoc --destination doc *.js readme.md"
     },
     "dependencies": {
         "cjs-emitter": "1.*.*"
