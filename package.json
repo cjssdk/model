@@ -15,10 +15,6 @@
     "dependencies": {
         "cjs-emitter": "1.*.*"
     },
-    "devDependencies": {
-        "mocha": "2.*.*",
-        "should": "8.*.*"
-    },
     "keywords": [
         "commonjs",
         "sdk",
