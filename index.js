@@ -24,7 +24,7 @@ var Emitter = require('cjs-emitter');
  * @param {Object} [data={}] init attributes
  */
 function Model ( data ) {
-    if ( DEBUG ) {
+    if ( DEVELOP ) {
         if ( typeof this !== 'object' ) { throw new Error(__filename + ': must be constructed via new'); }
         if ( data && typeof data !== 'object' ) { throw new Error(__filename + ': wrong data type'); }
     }
@@ -66,7 +66,7 @@ Model.prototype.constructor = Model;
 Model.prototype.clear = function () {
     var data = this.data;
 
-    if ( DEBUG ) {
+    if ( DEVELOP ) {
         if ( typeof data !== 'object' ) { throw new Error(__filename + ': wrong data type'); }
     }
 
@@ -109,7 +109,7 @@ Model.prototype.clear = function () {
  * @fires Model#init
  */
 Model.prototype.init = function ( data ) {
-    if ( DEBUG ) {
+    if ( DEVELOP ) {
         if ( typeof data !== 'object' ) { throw new Error(__filename + ': wrong data type'); }
     }
 
@@ -143,7 +143,7 @@ Model.prototype.init = function ( data ) {
  * @return {boolean} attribute exists or not
  */
 Model.prototype.has = function ( name ) {
-    if ( DEBUG ) {
+    if ( DEVELOP ) {
         if ( typeof this.data !== 'object' ) { throw new Error(__filename + ': wrong this.data type'); }
     }
 
@@ -160,7 +160,7 @@ Model.prototype.has = function ( name ) {
  * @return {*} associated value
  */
 Model.prototype.get = function ( name ) {
-    if ( DEBUG ) {
+    if ( DEVELOP ) {
         if ( typeof this.data !== 'object' ) { throw new Error(__filename + ': wrong this.data type'); }
     }
 
@@ -193,7 +193,7 @@ Model.prototype.set = function ( name, value ) {
     var isAttrSet = name in this.data,
         emitData  = {name: name, curr: value};
 
-    if ( DEBUG ) {
+    if ( DEVELOP ) {
         if ( typeof this.data !== 'object' ) { throw new Error(__filename + ': wrong this.data type'); }
     }
 
@@ -242,7 +242,7 @@ Model.prototype.unset = function ( name ) {
     var isAttrSet = name in this.data,
         emitData;
 
-    if ( DEBUG ) {
+    if ( DEVELOP ) {
         if ( typeof this.data !== 'object' ) { throw new Error(__filename + ': wrong this.data type'); }
     }
 
