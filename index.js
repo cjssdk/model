@@ -24,10 +24,13 @@ var Emitter = require('cjs-emitter');
  * @param {Object} [data={}] init attributes
  */
 function Model ( data ) {
-    if ( DEVELOP ) {
-        if ( typeof this !== 'object' ) { throw new Error(__filename + ': must be constructed via new'); }
-        if ( data && typeof data !== 'object' ) { throw new Error(__filename + ': wrong data type'); }
-    }
+    console.assert(typeof this === 'object', 'must be constructed via new');
+    console.assert(typeof data === 'object' || !data, 'wrong data type');
+    
+    // if ( DEVELOP ) {
+    //     if ( typeof this !== 'object' ) { throw new Error(__filename + ': must be constructed via new'); }
+    //     if ( data && typeof data !== 'object' ) { throw new Error(__filename + ': wrong data type'); }
+    // }
 
     // parent constructor call
     Emitter.call(this);
