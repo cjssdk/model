@@ -1,6 +1,7 @@
 Basic model implementation
 ==========================
 
+[![Build Status](https://img.shields.io/travis/cjssdk/model.svg?style=flat-square)](https://travis-ci.org/cjssdk/model)
 [![NPM version](https://img.shields.io/npm/v/cjs-model.svg?style=flat-square)](https://www.npmjs.com/package/cjs-model)
 [![Dependencies Status](https://img.shields.io/david/cjssdk/model.svg?style=flat-square)](https://david-dm.org/cjssdk/model)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/cjssdk)

@@ -11,15 +11,17 @@
         "url": "https://github.com/cjssdk/model.git"
     },
     "scripts": {
-        "lint": "eslint ./*.js",
-        "test": "node ./tests/main.js",
+        "lint": "eslint .",
+        "mocha": "node ./tests/main.js",
+        "test": "npm run lint",
         "jsdoc": "jsdoc --destination doc *.js readme.md"
     },
     "dependencies": {
         "cjs-emitter": "cjssdk/emitter"
     },
     "devDependencies": {
-        "cjs-eslint-config": "cjssdk/eslint-config"
+        "cjs-eslint-config": "cjssdk/eslint-config",
+        "eslint": "2.*.*"
     },
     "keywords": [
         "commonjs",
