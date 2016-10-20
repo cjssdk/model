@@ -69,7 +69,7 @@ Check an attribute existence:
 
 ```js
 if ( model.has('attr3') ) {
-    ...
+    /* ... */
 }
 ```
 
