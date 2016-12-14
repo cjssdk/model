@@ -26,7 +26,7 @@ var Emitter = require('cjs-emitter');
 function Model ( data ) {
     console.assert(typeof this === 'object', 'must be constructed via new');
     console.assert(typeof data === 'object' || !data, 'wrong data type');
-    
+
     // if ( DEVELOP ) {
     //     if ( typeof this !== 'object' ) { throw new Error(__filename + ': must be constructed via new'); }
     //     if ( data && typeof data !== 'object' ) { throw new Error(__filename + ': wrong data type'); }
@@ -70,7 +70,9 @@ Model.prototype.clear = function () {
     var data = this.data;
 
     if ( DEVELOP ) {
-        if ( typeof data !== 'object' ) { throw new Error(__filename + ': wrong data type'); }
+        if ( typeof data !== 'object' ) {
+            throw new Error(__filename + ': wrong data type');
+        }
     }
 
     // is there any data?
@@ -113,7 +115,9 @@ Model.prototype.clear = function () {
  */
 Model.prototype.init = function ( data ) {
     if ( DEVELOP ) {
-        if ( typeof data !== 'object' ) { throw new Error(__filename + ': wrong data type'); }
+        if ( typeof data !== 'object' ) {
+            throw new Error(__filename + ': wrong data type');
+        }
     }
 
     // valid input
@@ -147,7 +151,9 @@ Model.prototype.init = function ( data ) {
  */
 Model.prototype.has = function ( name ) {
     if ( DEVELOP ) {
-        if ( typeof this.data !== 'object' ) { throw new Error(__filename + ': wrong this.data type'); }
+        if ( typeof this.data !== 'object' ) {
+            throw new Error(__filename + ': wrong this.data type');
+        }
     }
 
     // hasOwnProperty method is not available directly in case of Object.create(null)
@@ -164,7 +170,9 @@ Model.prototype.has = function ( name ) {
  */
 Model.prototype.get = function ( name ) {
     if ( DEVELOP ) {
-        if ( typeof this.data !== 'object' ) { throw new Error(__filename + ': wrong this.data type'); }
+        if ( typeof this.data !== 'object' ) {
+            throw new Error(__filename + ': wrong this.data type');
+        }
     }
 
     return this.data[name];
@@ -197,7 +205,9 @@ Model.prototype.set = function ( name, value ) {
         emitData  = {name: name, curr: value};
 
     if ( DEVELOP ) {
-        if ( typeof this.data !== 'object' ) { throw new Error(__filename + ': wrong this.data type'); }
+        if ( typeof this.data !== 'object' ) {
+            throw new Error(__filename + ': wrong this.data type');
+        }
     }
 
     if ( isAttrSet ) {
@@ -246,7 +256,9 @@ Model.prototype.unset = function ( name ) {
         emitData;
 
     if ( DEVELOP ) {
-        if ( typeof this.data !== 'object' ) { throw new Error(__filename + ': wrong this.data type'); }
+        if ( typeof this.data !== 'object' ) {
+            throw new Error(__filename + ': wrong this.data type');
+        }
     }
 
     if ( isAttrSet ) {
