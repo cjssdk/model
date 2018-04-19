@@ -6,7 +6,7 @@ Basic model implementation
 [![dependencies status](https://img.shields.io/david/cjssdk/model.svg?style=flat-square)](https://david-dm.org/cjssdk/model)
 [![devDependencies status](https://img.shields.io/david/dev/cjssdk/model.svg?style=flat-square)](https://david-dm.org/cjssdk/model?type=dev)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/cjssdk)
-[![RunKit](https://img.shields.io/badge/RunKit-try-yellow.svg?style=flat-square)](https://runkit.com/npm/cjs-model)
+[![RunKit](https://img.shields.io/badge/RunKit-try-yellow.svg?style=flat-square)](https://npm.runkit.com/cjs-model)
 
 
 Represents domain-specific data or information that an application will be working with.
