@@ -8,7 +8,7 @@
 'use strict';
 
 /** @private */
-var Emitter = require('cjs-emitter');
+var Emitter = require('@cjssdk/emitter');
 
 
 /**

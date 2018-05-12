@@ -2,24 +2,24 @@ Basic model implementation
 ==========================
 
 [![build status](https://img.shields.io/travis/cjssdk/model.svg?style=flat-square)](https://travis-ci.org/cjssdk/model)
-[![npm version](https://img.shields.io/npm/v/cjs-model.svg?style=flat-square)](https://www.npmjs.com/package/cjs-model)
+[![npm version](https://img.shields.io/npm/v/@cjssdk/model.svg?style=flat-square)](https://www.npmjs.com/package/@cjssdk/model)
 [![dependencies status](https://img.shields.io/david/cjssdk/model.svg?style=flat-square)](https://david-dm.org/cjssdk/model)
 [![devDependencies status](https://img.shields.io/david/dev/cjssdk/model.svg?style=flat-square)](https://david-dm.org/cjssdk/model?type=dev)
 [![Gitter](https://img.shields.io/badge/gitter-join%20chat-blue.svg?style=flat-square)](https://gitter.im/DarkPark/cjssdk)
-[![RunKit](https://img.shields.io/badge/RunKit-try-yellow.svg?style=flat-square)](https://npm.runkit.com/cjs-model)
+[![RunKit](https://img.shields.io/badge/RunKit-try-yellow.svg?style=flat-square)](https://npm.runkit.com/@cjssdk/model)
 
 
 Represents domain-specific data or information that an application will be working with.
 A typical example is a user account (e.g name, avatar, e-mail) or a music track (e.g title, year, album).
 Holds information, but don’t handle behaviour and don’t format information or influence how data appears.
 
-`cjs-model` extends [Emitter](https://github.com/cjssdk/emitter) interface.
+`@cjssdk/model` extends [Emitter](https://github.com/cjssdk/emitter) interface.
 
 
 ## Installation ##
 
 ```bash
-npm install cjs-model
+npm install @cjssdk/model
 ```
 
 
@@ -28,7 +28,7 @@ npm install cjs-model
 Add the constructor to the scope:
 
 ```js
-var Model = require('cjs-model');
+var Model = require('@cjssdk/model');
 ```
 
 Create an empty instance:
@@ -129,4 +129,4 @@ according to the contribution [rules](.github/contributing.md).
 
 ## License ##
 
-`cjs-model` is released under the [MIT License](license.md).
+`@cjssdk/model` is released under the [MIT License](license.md).
